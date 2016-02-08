@@ -71,6 +71,7 @@ source data/import-addressbook.sql;
 source data/import-entry.sql;
 
 
+
 Exercise 8
 ==========
 select email from Account where id=63;
@@ -94,3 +95,34 @@ select createdOn from AddressBook where name="Lorem Foundation";
 | 2016-06-26 02:43:41 |
 | 2015-05-04 14:28:16 |
 +---------------------+
+
+
+
+Exercise 9
+==========
+select count(*) from Account;
++----------+
+| count(*) |
++----------+
+|     1000 |
++----------+
+
+select count(*) from AddressBook;
++----------+
+| count(*) |
++----------+
+|     1100 |
++----------+
+
+select count(*) from Entry;
++----------+
+| count(*) |
++----------+
+|     4000 |
++----------+
+
+
+
+Exercise 10
+===========
+
