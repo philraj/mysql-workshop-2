@@ -125,4 +125,53 @@ select count(*) from Entry;
 
 Exercise 10
 ===========
+select count(*) from Entry WHERE birthday < '1982-02-12';                                                                                                                  
++----------+
+| count(*) |
++----------+
+|     2687 |
++----------+
 
+select count(*) from Entry WHERE birthday >= '1965-01-01';
++----------+
+| count(*) |
++----------+
+|     2597 |
++----------+
+
+select * from Entry where birthday = (select MIN(birthday) from Entry);
++------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id   | addressBookId | firstName | lastName | birthday            | type  | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| 2260 |            93 | Abigail   | Rollins  | 1945-09-02 09:21:58 | other | address | 194 Non Road   | Berlin         | Berlin           | Bolivia         | 791155          |
++------+---------------+-----------+----------+---------------------+-------+---------+----------------+----------------+------------------+-----------------+-----------------+
+
+
+
+Exercise 11
+===========
+select count(*) from Entry where NOT type='other';
++----------+
+| count(*) |
++----------+
+|     2800 |
++----------+
+
+select count(*) from Entry where type="home" OR type="work";
++----------+
+| count(*) |
++----------+
+|     2800 |
++----------+
+
+select count(*) from Entry where subtype="phone";
++----------+
+| count(*) |
++----------+
+|      600 |
++----------+
+
+
+
+Exercise 12
+===========
