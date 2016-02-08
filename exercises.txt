@@ -71,3 +71,26 @@ source data/import-addressbook.sql;
 source data/import-entry.sql;
 
 
+Exercise 8
+==========
+select email from Account where id=63;
++-------------------------------------------------+
+| email                                           |
++-------------------------------------------------+
+| consectetuer.rhoncus.Nullam@temporloremeget.org |
++-------------------------------------------------+
+
+select name from AddressBook where id=3;
++--------------------+
+| name               |
++--------------------+
+| Donec Incorporated |
++--------------------+
+
+select createdOn from AddressBook where name="Lorem Foundation";
++---------------------+
+| createdOn           |
++---------------------+
+| 2016-06-26 02:43:41 |
+| 2015-05-04 14:28:16 |
++---------------------+
