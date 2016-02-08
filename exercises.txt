@@ -60,3 +60,14 @@ TRUNCATE Entry;
 Exercise 6
 ==========
 DELETE FROM Account;
+
+
+Exercise 7
+==========
+source data/import-table-structure.sql;
+use decodemtl_addressbook_import;
+source data/import-account.sql;
+source data/import-addressbook.sql;
+source data/import-entry.sql;
+
+
