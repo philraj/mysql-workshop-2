@@ -1,0 +1,7 @@
+statements:
+mysql-ctl start
+mysql -u philraj
+
+(ran find/replace inside import-table-structure.sql, then saved as...)
+
+source data/import-table-structure2.sql
