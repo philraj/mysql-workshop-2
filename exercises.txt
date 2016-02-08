@@ -55,3 +55,8 @@ UPDATE `Entry` SET firstName='Patrick', lastName='Bateman' WHERE addressBookId=1
 Exercise 5
 ==========
 TRUNCATE Entry;
+
+
+Exercise 6
+==========
+DELETE FROM Account;
