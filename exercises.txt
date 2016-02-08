@@ -1,0 +1,30 @@
+Exercise 1
+==========
+statements:
+
+mysql-ctl start
+mysql -u philraj
+(ran find/replace inside import-table-structure.sql, then saved as...)
+source data/import-table-structure2.sql
+
+
+Exercise 2
+==========
+use decodemtl_addressbook;
+insert into Account value(null, 'test@email.com', 'abc123', '2016-02-08 16:53:50', '2016-02-08 16:53:50');  
+insert into AddressBook value(null, 1, 'Phil Rajchgot', '2016-02-08 16:59:40', null);
+insert into Entry value(null, 1, 'Paul', 'Allen', null, 'work', 'phone', '555-9876', null, null, null, null);
+insert into Entry value(null, 1, 'Paul', 'Allen', null, 'home', 'phone', '555-1234', null, null, null, null);                                                                  
+insert into Entry value(null, 1, 'Paul', 'Allen', null, 'work', 'address', '123 Fake Real St, Manhattan, NY, USA', null, null, null, null);                                    
+
++----+---------------+-----------+----------+----------+------+---------+--------------------------------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday | type | subtype | contentLineOne                       | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+----------+------+---------+--------------------------------------+----------------+------------------+-----------------+-----------------+
+|  1 |             1 | Paul      | Allen    | NULL     | work | phone   | 555-9876                             | NULL           | NULL             | NULL            | NULL            |
+|  2 |             1 | Paul      | Allen    | NULL     | home | phone   | 555-1234                             | NULL           | NULL             | NULL            | NULL            |
+|  3 |             1 | Paul      | Allen    | NULL     | work | address | 123 Fake Real St, Manhattan, NY, USA | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+----------+----------+------+---------+--------------------------------------+----------------+------------------+-----------------+-----------------+
+
+
+Exercise 3
+==========
