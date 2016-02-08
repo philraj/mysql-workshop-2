@@ -50,3 +50,8 @@ Exercise 4
 update Account SET email='test2@newemail.net', password='789xyz', modifiedOn='2016-02-08 17:20:13';
 update AddressBook SET name='Associates', modifiedOn=NOW();
 UPDATE `Entry` SET firstName='Patrick', lastName='Bateman' WHERE addressBookId=1;
+
+
+Exercise 5
+==========
+TRUNCATE Entry;
