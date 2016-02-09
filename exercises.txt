@@ -175,3 +175,19 @@ select count(*) from Entry where subtype="phone";
 
 Exercise 12
 ===========
+set @maxCounts = (select MAX(`count(*)`) from  (select count(*), `accountId` from AddressBook group by `accountId`) as test);
+select * from (select count(*), `accountId` from AddressBook group by `accountId`) as test1 where `count(*)` = @maxCounts;
++----------+-----------+
+| count(*) | accountId |
++----------+-----------+
+|       19 |         5 |
+|       19 |        14 |
++----------+-----------+
+
+select * from (select `addressBookId`, count(*) from Entry group by `addressBookId`) as temp1 where `count(*)` = (select MAX(`count(*)`) from (select `addressBookId`, count(*) from Entry group by `addressBookId`) as temp2);
++---------------+----------+
+| addressBookId | count(*) |
++---------------+----------+
+|            37 |       52 |
++---------------+----------+
+(what a mouth full)
